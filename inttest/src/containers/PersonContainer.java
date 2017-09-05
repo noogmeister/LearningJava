@@ -22,6 +22,19 @@ public class PersonContainer {
         return this.list.contains(p);
 
     }
+    public Person search(String name) throws NullPointerException {
+        Person personToReturn = null;
+        try {
+            for(Person p : this.list) {
+                if(p.getFamilyName().equals(name) || p.getGivenName().equals(name)) {
+                    personToReturn = p;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("The Person you are looking for is not in the container.");
+        }
+        return personToReturn;
+    }
 
     public String printList() {
         String s = "";

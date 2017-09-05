@@ -1,5 +1,6 @@
 package containers;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Person {
@@ -8,6 +9,12 @@ public class Person {
     private String familyName;
     private ArrayList<String> titlesMade;
 
+    public Person (JTextField gName, JTextField fName) {
+        this.givenName = gName.getText();
+        this.familyName = fName.getText();
+        this.titlesMade = new ArrayList<>();
+
+    }
 
     public Person(String gName, String fName, ArrayList<String> titlesMade) {
         this.givenName = gName;
@@ -43,6 +50,7 @@ public class Person {
             formatted += String.format("%-3s %d %20s", "\nTitle:", count, s);
 
             count++;
+            System.out.println();
 
         }
         return formatted;
