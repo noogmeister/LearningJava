@@ -2,14 +2,15 @@
 ## Introduction
 #########################################
 
-I am not sure what I want to do, but I am thinking of creating the catalog that I started before for jav videos.
-You know, everyone really needs to know where all their porn is.
+This is an attempt to create a kind of catalogue for movies, or tv shows, which focuses on the actors.
 
 #########################################
 ## GUI
 #########################################
 
-1. create user interface.
+1. Create user interface. How should I structure the gui file? should I create everything in the constructor,
+or should I create an object that does everything for me separating my logic from the gui?
+
 
 #########################################
 ## Containers
