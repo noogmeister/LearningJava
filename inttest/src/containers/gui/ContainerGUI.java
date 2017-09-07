@@ -23,6 +23,8 @@ public class ContainerGUI extends JFrame {
         add(mainPanel);
 
         // create name panel (two labels, and two text fields)
+        BoxLayout nameBoxes = new BoxLayout()
+        JPanel namesPanel = new JPanel(nameBoxes);
 
         // create comment area panel (
         // one text field, which displays the comments, and has a save changes button).
