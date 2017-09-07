@@ -54,6 +54,8 @@ public class UserInterface implements Runnable {
     // create components for the frame, including the layout manager.
 
     private void createComponents(Container container) {
+
+
         JPanel panel = new JPanel(new GridLayout(3, 2));
 
 
@@ -62,7 +64,7 @@ public class UserInterface implements Runnable {
         familyName = new JLabel("Given Name: ");
         fNameField = new JTextField(10);
         button = new JButton("Add!");
-        textArea = new JTextArea( 10, 20);
+        textArea = new JTextArea(10, 20);
 
         AddButtonListener addButton = new AddButtonListener();
 
@@ -74,8 +76,12 @@ public class UserInterface implements Runnable {
         panel.add(new JLabel("Add"));
         panel.add(button);
 
-        container.add(panel, BorderLayout.NORTH);
-        container.add(textArea, BorderLayout.SOUTH);
+        MyPanel myPanel = new MyPanel(addButton, textArea);
+        panel.add(myPanel);
+        panel.add(textArea);
+
+        container.add(panel);
+
 
 
     }
